@@ -68,4 +68,122 @@ var name = "xyz" // here name --> have string datatype
         // reusableFunction(); ---> call/invoke function
 
 
+        // function reusableFunction(param1, param2) {  ---> declaration of function with arguments
+        //     console.log("Hi World");
+        // }
+        // reusableFunction(); ---> call/invoke function
+
+// Global scope : Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+// note : variables which are declare without "let" or "const" variables --> they are automatically declare as Global variable
+
+// Local scope : variables which are decalre within function have local scope.
+
+// note : It is possible to have both local and global variables with the same name.
+//        in function if we not declare any local variables than all operation done on globle variables.
+
+//---------------Queue--------------
+// Queue : abstract data structure where items are kept in order.
+//       : LIFO rule
+// make array Queue --> 1) push() element at the end 2) shift() remove element from front
+// 
+// -------------if : for conditional logic------------
+// syntex : 
+    // if (condition is true) {
+    //   statement is executed
+    // }
+
+// Comparison operators : (all this operators return either true or false) 
+// 1) Equality Operator (==) : (NOTE: when we compare two different data types using it ---> it must convert one type to another ==> it called "Type Coercion")
+// 2) Strict Equality Operator (===) : it is counter part of (==). (NOTE: it is note perform a type conversion.) --> therefor, It return "false" when two values are same but they have different datatype.
+// 3) Inequality operator (!=) : "false" --> equal values and (data types same/different) & "true" --> not equal
+// 4) Strict inequality operator (!==) --> "false" --> equal values and (data types must be same) & "true" --> not equal
+// 5) Greater Than Operator(>)
+// 6) Greater Than Or Equal To Operator(>=)
+// 7) Less Than Operator(<)
+// 8) Less Than Or Equal To Operator(<=)
+// 9) Logical And Operator(&&) : it tests more than one thing at a time.
+// 10) Logical or operator (||) 
+
+// -------------if else: for conditional logic------------
+// syntex : 
+    // if (condition is true) {
+    //   statement is executed
+    // }
+    // else {
+
+    // }
+
+// -------------if else if: for conditional logic------------
+// syntex : 
+    // if (condition is true) {
+    //   statement is executed
+    // }
+    // else if{
+
+    // }
+    // else {
+
+    // }
+// --------Chaining If Else Statements------------
+// syntex : 
+    // if (condition1) {
+    //     statement1
+    //   } else if (condition2) {
+    //     statement2
+    //   } else if (condition3) {
+    //     statement3
+    //   . . .
+    //   } else {
+    //     statementN
+    //   }
+
+// -------------Switch Statements------------
+//que:Write a switch statement which tests val and sets answer for the following conditions:
+    // 1 - alpha
+    // 2 - beta
+    // 3 - gamma
+    // 4 - delta
+//ans:
+function caseInSwitch(val) {
+    let answer = "";
+    // Only change code below this line
+    
+    switch(val) {
+      case 1 :
+        answer = "alpha";
+        break;
+      case 2:
+        answer = "beta";
+        break;
+      case 3:
+        answer = "gamma";
+        break;
+      case 4:
+        answer = "delta";
+        break;
+    }
+  
+  
+    // Only change code above this line
+    return answer;
+  }
+  
+  caseInSwitch(1);
+
+//-------switch with default----
+// switch (num) {
+//     case value1:
+//       statement1;
+//       break;
+//     case value2:
+//       statement2;
+//       break;
+//   ...
+//     default:
+//       defaultStatement;
+//       break;
+//   }
+
+
+
 
