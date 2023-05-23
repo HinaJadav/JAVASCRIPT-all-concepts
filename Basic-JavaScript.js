@@ -1,7 +1,7 @@
 //DATATYPE : in JS there is a 8 datatypes
     // undefined : when JS variable declares they have initial value of "undefine". (if we do mahematical operation on it we get --> NaN) & (if we concatenate string with undefine we get --> undefine)
     // null
-    // boolean
+    // boolean : return true/false
     // string
     // symbol
     // gidint
@@ -54,6 +54,8 @@ var name = "xyz" // here name --> have string datatype
 // immutable value of string : In this we can't change any letter of string individually but we can change entire string value
 
 //---------------Array------------
+// Syntex : let/var/const <array name> = [<elements>].
+
 // some besic concepts follow here --> which we show before in c/c++
 // push() : it is use for append data at the end of an array.
 // pop() : it is use for remove last element of array.
@@ -184,6 +186,142 @@ function caseInSwitch(val) {
 //       break;
 //   }
 
+// ------------- Object------------
+// OBJECT : it is simillar to arrays, but except the indexes to access data we use "properties".
+// access properties : 
+// method 1 : dot notation (.) ---> we use it when we know properties name
+// method 2 : bracket notation ([])
+// Add properties in object ==> Syntex : <object name>.<new property name> = <property value>;
+// Delete properties of object ==> Syntex : delete <object name>.<new property name>;
+
+// QUE : we can convert "switch stmt" into "object"
+// see ---> SwitchToObject.js
+
+//-------"Array of Objects"-------
+// example,
+          // const ourMusic = [
+          //   {
+          //     "artist": "Daft Punk",
+          //     "title": "Homework",
+          //     "release_year": 1997,
+          //     "formats": [ 
+          //       "CD", 
+          //       "Cassette", 
+          //       "LP"
+          //     ],
+          //     "gold": true
+          //   },
+          //   {
+          //     "artist": "Daft Punk1",
+          //     "title": "Homework1",
+          //     "release_year": 19971,
+          //     "formats": [ 
+          //       "CD1", 
+          //       "Cassette1", 
+          //       "LP1"
+          //     ],
+          //     "gold": true
+          //   }
+          // ];
+
+//-----"Nested Objects"-----
+// note : The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+//example,
+          // const ourStorage = {
+          //   "desk": {
+          //     "drawer": "stapler"
+          //   },
+          //   "cabinet": {
+          //     "top drawer": { 
+          //       "folder1": "a file",
+          //       "folder2": "secrets"
+          //     },
+          //     "bottom drawer": "soda"
+          //   }
+          // };
+
+          // ourStorage.cabinet["top drawer"].folder2;
+          // ourStorage.desk.drawer;
+
+// NOTE : object can contain "Nested Objects" and "Nested Array".
+//-----Nested Arrays of Objects-----
+//example,
+        // const ourPets = [
+        //   {
+        //     animalType: "cat",
+        //     names: [
+        //       "Meowzer",
+        //       "Fluffy",
+        //       "Kit-Cat"
+        //     ]
+        //   },
+        //   {
+        //     animalType: "dog",
+        //     names: [
+        //       "Spot",
+        //       "Bowser",
+        //       "Frankie"
+        //     ]
+        //   }
+        // ];
+// how to call Nested arrays( elements = objects)
+        // ourPets[0].names[1];
+        // ourPets[1].names[0];
+
+//QUE : Record Collection
+//see code
+
+
+// Note : here, we use (for, while, do..while) like we use them in c++;
+// Note : the do...while different from other loops is how it behaves when the condition fails on the first check.
+
+
+
+
+
+//--------------RANDOM-------------
+//Math.random() ==> function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). 
+// ---> Thus Math.random() can return a 0 but never return a 1.
+
+
+// Math.floor() ==> to round the value down to the nearest whole number.
+
+// ------Generate Random Whole Numbers within a Range-------
+// Using this method we can generate random whole number in range ---> (0 to <given number>) / (min to max)
+// formula : Math.floor(Math.random() * (max - min + 1)) + min
+
+
+// ---------parseInt()-----------
+// parseInt() ==> It take a string and returns an integer. 
+// example,
+          //const a = parseInt("007"); -----------> O/P = 7
+
+// parseInt() : takes a second argument for the "radix", which specifies the base of the number in the string. 
+// The radix can be an integer "between 2 and 36".
+//Syntex, 
+          // parseInt(string, radix);
+//example,
+          // const a = parseInt("11", 2);
+          // The radix variable says that 11 is in the binary system, or base 2. This example converts the string 11 to an integer 3.
+
+
+// ------------------Conditional (Ternary) Operator--------------------
+// ==> a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.
+// Note : Using this we can replace if/else loop     
+
+//-------------------Multiple Conditional (Ternary) Operators--------------------
+// we can convert,
+          // if (a === b) {
+          //   return "a and b are equal";
+          // }
+          // else if (a > b) {
+          //   return "a is greater";
+          // }
+          // else {
+          //   return "b is greater";
+          // }
+// Into,
+          //(a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
 
 
 
