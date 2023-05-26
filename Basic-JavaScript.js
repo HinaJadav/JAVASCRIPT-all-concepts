@@ -1,3 +1,5 @@
+// Basic JavaScript ---> ES5 : using this we can write our code in JS.
+
 //DATATYPE : in JS there is a 8 datatypes
     // undefined : when JS variable declares they have initial value of "undefine". (if we do mahematical operation on it we get --> NaN) & (if we concatenate string with undefine we get --> undefine)
     // null
@@ -29,6 +31,8 @@ var name = "xyz" // here name --> have string datatype
 // "let" keyword: it is use for decalring varibles.
 
 // "const" keyword: it is use for declare read-only variables
+// Note : Most of JS-developers use "const" for declare their all variable and moreover this if they know they will need to reassign that variable than they use "let". 
+
 
 // "+" : addition 
 // "-" : substraction
@@ -61,6 +65,8 @@ var name = "xyz" // here name --> have string datatype
 // pop() : it is use for remove last element of array.
 // shift() : it is use for remove first element of array.
 // unshift() : it is use for add first element in array.
+
+
 
 // ------------function--------------
 // Sysntex : function <function name>() {---code---}
@@ -324,4 +330,81 @@ function caseInSwitch(val) {
           //(a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
 
 
+
+
+
+
+
+//--------------------PREDEFINE - METHOD-----------------------
+// Note : we can use "this" keyword for use object own property into object's function etc. ----> we use 
+
+//1) call() : Function Borrowing
+//--> When one object need to use another object method than for this we use it
+//example, 
+// In below code, in "person" object we write function --> which prints that object properties.
+// Now, "person1" is similer object of "person" just different values of properties. Now, if we want to use same function here than we have to ways: 1) again write same function into "person1". ----> it leeds to retundance of code because write same type of code more than one time is not good.
+                                                                                                                                                  // 2) use call() method ---> it is more effective. 
+
+        // const person = {
+        //   fullName: function() {
+        //     return this.firstName + " " + this.lastName;     --> here, using "this" => it refers properties of that object from which we invoke that property.
+        //   }
+        // }
+        // const person1 = {
+        //   firstName:"John",
+        //   lastName: "Doe"
+        // }
+
+        // person.fullName.call(person1);     ------> Here, whan we use call() on "person1" than in function() "this" keyword point now "person1" properties.
+
+
+
+// Note: If we know that we need to reuse any object function into another function than ----> it is more effective to make that function Global.
+//example,
+
+        // let fullname = function( ) {
+        //     return this.firstName + " " + this.lastName;     --> here, using "this" => it refers properties of that object from which we invoke that property.
+        // }
+        // const person = {
+        //   firstName:"asd",
+        //   lastName: "zxc"
+        // }
+        // const person1 = {
+        //   firstName:"John",
+        //   lastName: "Doe"
+        // }
+
+        // fullName.call(person1);     ------> Here, whan we use call() on "person1" than in function() "this" keyword point now "person1" properties.
+//----------------------------------------------------------------------------
+// This global function with argument ---> than we need to pass that argument value after 
+        // let fullname = function(lastName) {
+        //     return this.firstName + " " + this.lastName;     --> here, using "this" => it refers properties of that object from which we invoke that property.
+        // }
+        // const person = {
+        //   firstName:"asd",
+        //   lastName: "zxc"
+        // }
+        // const person1 = {
+        //   firstName:"John",
+        //   lastName: "Doe"
+        // }
+
+        // fullName.call(person1, "JADAV");     ------> Here, whan we use call() on "person1" than in function() "this" keyword point now "person1" properties.
+
+//2) Math.max() : it is use to find largest number from list of num.
+//ex: Math.max(1,2,3) ---------> 3
+
+
+//3) apply() : in array we not directly use "Math.max()" method -----> solution is we need to apply this type of methods on array
+//ex: Math.max.apply(null,[1,2,3]) -----> 3
+
+// Difference between call() and apply() method : is that how we pass arguments in this
+// In call() : (first args = refernce object, etc.) and second args = all valuse on which we want to apply function
+// In apply() : (first args = refernce object, etc.) and second args = list of all values on which we want to apply function.
+
+
+
+
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
 
