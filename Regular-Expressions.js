@@ -281,4 +281,33 @@
     // checkPass.test(password);       
 
 
-    
+
+
+
+// TOPIC 23: Check For Mixed Grouping of Characters
+// CODE:Fix the regex so that it checks for the names of Franklin Roosevelt or Eleanor Roosevelt in a case sensitive manner and it should make concessions for middle names.
+// Then fix the code so that the regex that you have created is checked against myString and either true or false is returned depending on whether the regex matches.
+
+//Ans: 
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/; // Change this line
+let result = myRegex.test(myString); // Change this line
+// After passing the challenge experiment with myString and see how the grouping works
+
+
+
+
+//TOPIC 24: Search and Replace
+//use : ".replace()" method ---> in this method we have two arguments(<regex>, <new string>)
+// this method return newly generated string
+//ex:
+    // let wrongText = "The sky is silver.";
+    // let silverRegex = /silver/;
+    // wrongText.replace(silverRegex, "blue");--------------------->The sky is blue.
+
+
+
+
+// TOPIC 25: Remove Whitesopace from Start and End.
+// using method : String.prototype.trim()
+// using regex : /^\s+|\s+$/g and mwthod : ".replace(regex, "")"
