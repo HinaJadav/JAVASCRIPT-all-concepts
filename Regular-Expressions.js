@@ -213,7 +213,7 @@
 
 
 
-//TOPIC 18: Upper and Lower bound for Matches("Quantity specifier" == {x,y})----------------> Using this we can find match of specific character in limited range
+//TOPIC 18: Upper and Lower bound for Matches("Quantity specifier" == {x,y})----------------> Using this we can find match of specific character in limited MIN to MAX range
 //regex : /<character>{x, y}/ (where, x = start range no. and y = end range no.)
 //ex : 
       //to match only the letter a appearing between 3 and 5 times in the string -------------------> regex : /a{3,5}h/
@@ -224,3 +224,61 @@
         // multipleA.test(A2);---------------------->false
 
 
+
+
+//TOPIC 19: Only Lower bound for Matches("Quantity specifier" == {x,})----------------->Using this we can find match of specific character in limited MIN range to infinite
+//regex : /<character>{x,}/ (where, x = start range no. and y = infinite)
+//ex : 
+    // let A4 = "haaaah";
+    // let A2 = "haah";
+    // let A100 = "h" + "a".repeat(100) + "h";
+    // let multipleA = /ha{3,}h/;
+    // multipleA.test(A4);------------------------------>true
+    // multipleA.test(A2);------------------------------>false
+    // multipleA.test(A100);---------------------------->true
+
+//Note : "repeat(x)" : this method use for repeat any character x-times.
+//Syntex : <character>.repeat(x);
+
+
+
+
+//TOPIC 20: Exact number of matches("Quantity specifier" == {x})------------------->Using this we find exact no. of times matches of any specific character 
+//regex : /<character>{x}/ (where, x = exect no.)
+//ex : 
+    // let A4 = "haaaah";
+    // let A3 = "haaah";
+    // let A100 = "h" + "a".repeat(100) + "h";
+    // let multipleHA = /ha{3}h/;
+    // multipleHA.test(A4);--------------->false
+    // multipleHA.test(A3);--------------->true
+    // multipleHA.test(A100);------------->false
+
+
+
+
+//TOPIC 21: Checking String(Below method use for differentiate American and British Engish)
+// for this we use "?" : we put this symbol after that character for which we are not sure that it is come in that string or not
+// ex : 
+// let american = "color";
+// let british = "colour";
+// let rainbowRegex= /colou?r/;
+// rainbowRegex.test(american);------------->true
+// rainbowRegex.test(british);-------------->true
+    //bcz, here I put "?" after "u" so string which have "u" at that space or not --> it will not affect
+
+
+
+
+    
+//TOPIC 22: Lookaheads
+//There are two types of lookaheads : Positive, Negative
+//Positive lookahead = it will look to make sure the element in the search pattern is there.(?=...  (where, "..." = equired string))
+//Negative lookahead = it will look to make sure the element in the search pattern is not there(?!...)
+//ex: simple password checker that looks for between 3 and 6 characters and at least one number:
+    // let password = "abc123";
+    // let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+    // checkPass.test(password);       
+
+
+    
