@@ -126,3 +126,91 @@ reverseString("hello");
 //==> convert character (lowercase---->Uppercase)
 // ".toUpperCase()" 
 // Syntex : <character>.toUpperCase();
+
+
+
+
+//==> "Inheritance in Object":
+// set Perant constructor into child
+// when we make any instace of child object then they are instace of only child object not parent--> for make also those all instace of parent then do below code
+// for this we need to manage constructor
+// ex:
+    // function Bird() { }
+    // Bird.prototype = Object.create(Animal.prototype);
+    // let duck = new Bird();
+    // duck.constructor; ---------------> now, duck is instace of both "Bird" and "Animal".
+
+
+//==>Add Methods After Inheritance
+//ex:
+    // function Animal() { }
+    // Animal.prototype.eat = function() {
+    //   console.log("nom nom nom");
+    // };
+    // function Bird() { }
+    // Bird.prototype = Object.create(Animal.prototype);
+    // Bird.prototype.constructor = Bird;
+
+    // Bird.prototype.fly = function() {
+    //     console.log("I'm flying!");
+    // };
+
+    // let duck = new Bird();
+    // duck.eat();
+    // duck.fly();
+
+//==> Override Inherited Methods
+//ex:
+    // function Animal() { }
+    // Animal.prototype.eat = function() {
+    //   return "nom nom nom";
+    // };
+    // function Bird() { }
+
+    // Bird.prototype = Object.create(Animal.prototype);
+
+    // Bird.prototype.eat = function() {
+    //   return "peck peck peck";
+    // };----------------------------------------------------> Here, we override "eat()" method.
+
+
+
+
+//==> the Immediately Invoked Function Expression (IIFE)
+//ex:
+    // (function () {
+    //     console.log("Chirp, chirp!");
+    //   })();
+
+//Above function is anonymous function.
+
+
+//==>Use an IIFE to Create a Module
+//ex:
+    //Here, we have teo different function,
+        // function glideMixin(obj) {
+        //     obj.glide = function() {
+        //         console.log("Gliding on the water");
+        //     };
+        // }
+        // function flyMixin(obj) {
+        //     obj.fly = function() {
+        //         console.log("Flying, wooosh!");
+        //     };
+        // }
+    
+    //Now, we make one module which combine them and make one group
+        // let motionModule = (function () {
+            // return {
+            //     glideMixin: function(obj) {
+            //     obj.glide = function() {
+            //         console.log("Gliding on the water");
+            //     };
+            //     },
+            //     flyMixin: function(obj) {
+            //     obj.fly = function() {
+            //         console.log("Flying, wooosh!");
+            //     };
+            //     }
+            // }
+        // })();
