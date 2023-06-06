@@ -199,6 +199,9 @@ function caseInSwitch(val) {
 // method 2 : bracket notation ([])
 // Add properties in object ==> Syntex : <object name>.<new property name> = <property value>;
 // Delete properties of object ==> Syntex : delete <object name>.<new property name>;
+// Add Property into object ==> "prototype" keyword ==> Syntex : <object>.prototype.<new property>
+
+
 
 // QUE : we can convert "switch stmt" into "object"
 // see ---> SwitchToObject.js
