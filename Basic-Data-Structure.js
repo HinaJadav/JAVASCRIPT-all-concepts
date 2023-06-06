@@ -90,3 +90,39 @@ function reverseString(str) {
 
 reverseString("hello");
 
+
+
+
+//==> subString into String
+//Method 1:
+// ".endsWith()" : it check that given subString is present in String or not.
+// Syntex : <String>.endsWith(<subString);
+
+//Method 2:
+    // if (string.substr(-target.length) === target) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+
+
+
+
+//==> Reapeat given String.
+//Method 1:
+//".repeat()" : if we want to repeat string "n" times than we use this.
+// Syntex : <String>.repeat(<n>);
+
+//Method 2:
+    // let ans = "";
+    // for(let i = 0; i < Number; i++) {
+    //     ans += <string>;
+    // }
+    // retrun ans;
+
+
+
+
+//==> convert character (lowercase---->Uppercase)
+// ".toUpperCase()" 
+// Syntex : <character>.toUpperCase();
